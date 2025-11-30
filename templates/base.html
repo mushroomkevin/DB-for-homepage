@@ -57,10 +57,25 @@
     <h1 class="mycenter">2020 Brooks running shoes!</h1>
     <h2 class="mycenter">Only for your foot!</h2>
     
+    
     <div class="mycenter">
         <a href="/">홈</a> | 
-        <a href="/shoes">신발 목록</a> | 
         <a href="/add">추가</a>
     </div>
 
+    <!-- 검색기능 -->
+    <form action="/" method="GET" class="mycenter">
+        <input type="text" name="keyword" placeholder="검색어" value="{{ keyword }}">
+        <button type="submit">검색</button>
+        {% if keyword %}<a href="/">초기화</a>{% endif %}
+    </form>
+
+    <!-- 신발리스트나열 -->
+    <p class="mycenter">
+        {% if keyword %}"{{ keyword }}" 검색 결과: {{ shoes|length }}개
+        {% else %}전체: {{ shoes|length }}개{% endif %}
+    </p>
+    
+
+</body>
 </html>
