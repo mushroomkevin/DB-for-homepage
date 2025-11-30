@@ -7,3 +7,23 @@
     <input type="text" name="keyword" placeholder="검색어" required>
     <button type="submit">검색</button>
 </form>
+
+<h3 class="mycenter">통계</h3>
+<table>
+    <tr>
+        <th>전체 러닝화</th>
+        <th>평균 가격</th>
+        <th>평균 무게</th>
+    </tr>
+    <tr>
+        <td>{{ 총 신발 갯수 }}</td>
+        <td>${{ 평균 가격 }}</td>
+        <td>{{ 평균 무게 }}g</td>
+    </tr>
+</table>
+
+<div class="mycenter">
+    <button onclick="location.href='/shoes'">전체 목록 보기</button>
+    <button onclick="location.href='/add'">새 러닝화 추가</button>
+</div>
+
